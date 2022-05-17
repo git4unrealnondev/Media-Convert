@@ -74,8 +74,8 @@ def on_worker_process(data):
     #    data['exec_command'] += ffmpeg_args
 
     data['exec_command'] =  ["av1an"]
-    data['exec_command'] += [" --input ", "\"" + str(data["file_in"]) + "\""]
-    data['exec_command'] += [" --output_file ", "\""+ str(data["file_out"]) + "\""]
+    data['exec_command'] += [" -i ", "\"" + str(data["file_in"]) + "\""]
+    data['exec_command'] += [" -o ", "\""+ str(data["file_out"]) + "\""]
     data['repeat'] = False
 
 
