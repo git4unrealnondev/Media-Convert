@@ -1,0 +1,19 @@
+{
+    "author": "git4unrealnondev",
+    "compatibility": [
+        2
+    ],
+    "description": "Will convert files into AV1 format using CPU.",
+    "icon": "https://raw.githubusercontent.com/Josh5/unmanic.plugin.reorder_subtitle_streams_by_language/master/icon.png",
+    "id": "av1an_encoder_git4unreal",
+    "name": "AV1 Encoder CPU",
+    "platform": [
+        "all"
+    ],
+    "priorities": {
+        "on_library_management_file_test": 99,
+        "on_worker_process": 2
+    },
+    "tags": "subtitle,ffmpeg,av1an",
+    "version": "1.0.0"
+}
