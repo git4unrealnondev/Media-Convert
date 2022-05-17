@@ -1,6 +1,7 @@
 {
     "author": "git4unrealnondev",
     "compatibility": [
+        1,
         2
     ],
     "description": "Will convert files into AV1 format using CPU.",
