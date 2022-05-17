@@ -1,0 +1,27 @@
+{
+    "repo": {
+        "id": "repository.git4unrealnondev",
+        "name": "git4unrealnondev Development Plugins for Unmanic",
+        "icon": "https://raw.githubusercontent.com/Josh5/unmanic-plugins/master/icon.png",
+        "repo_data_directory": "https://raw.githubusercontent.com/git4unrealnondev/Media-Convert/main/repo/",
+        "repo_data_url": "https://raw.githubusercontent.com/git4unrealnondev/Media-Convert/main/repo/repo.json"
+    },
+    "plugins": [
+        {
+            "author": "git4unrealnondev",
+            "compatibility": [
+                2
+            ],
+            "description": "Converts files into AV1 using CPU.",
+            "icon": "https://raw.githubusercontent.com/Josh5/unmanic.plugin.ignore_video_file_over_resolution/master/icon.png",
+            "id": "av1an_encoder_git4unreal",
+            "name": "AV1 Encoder CPU",
+            "priorities": {
+                "on_library_management_file_test": 99,
+                "on_worker_process": 2
+            },
+            "tags": "AV1 Encode",
+            "version": "0.0.1"
+        }
+        ]
+}

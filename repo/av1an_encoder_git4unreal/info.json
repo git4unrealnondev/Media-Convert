@@ -15,5 +15,5 @@
         "on_worker_process": 2
     },
     "tags": "subtitle,ffmpeg,av1an",
-    "version": "1.0.0"
+    "version": "0.0.1"
 }
