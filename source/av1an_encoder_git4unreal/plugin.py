@@ -21,7 +21,7 @@ class Settings(PluginSettings):
     }
     form_settings = {
         "check_length": {
-            "label": "Would you like to check if the length of a file is longer than 265?",
+            "label": "Would you like to check if the length of a file is longer than 265?"
         }}
 
 
