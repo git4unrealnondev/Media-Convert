@@ -1,5 +1,6 @@
 from unmanic.libs.unplugins.settings import PluginSettings
 from unmanic.libs.system import System
+from pymediainfo import MediaInfo
 
 class Settings(PluginSettings):
     """
@@ -24,15 +25,20 @@ class Settings(PluginSettings):
             "label": "Would you like to check if the length of a file is longer than 265?"
         }}
 
+def get_av1_status(data):
+    media_info = MediaInfo.parse(data.get('path'))
+    for track in media_info.tracks:
+        if track.track_type == "Video":
+            return (track.codec_id).lower()
+
+
 def on_library_management_file_test(data):
     abspath = data.get('path')
 
-    # Get file probe
-    probe = Probe(logger, allowed_mimetypes=['video'])
-    if not probe.file(abspath):
-        # File probe failed, skip the rest of this test
-        return data
-    data['add_file_to_pending_tasks'] = True
+    codecinfo=get_av1_status(data)
+
+    if not "av1" in codecinfo:
+        data['add_file_to_pending_tasks'] = True
     return data
 
 
