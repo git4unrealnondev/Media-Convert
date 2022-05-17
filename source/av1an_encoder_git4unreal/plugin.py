@@ -24,6 +24,17 @@ class Settings(PluginSettings):
             "label": "Would you like to check if the length of a file is longer than 265?"
         }}
 
+def on_library_management_file_test(data):
+    abspath = data.get('path')
+
+    # Get file probe
+    probe = Probe(logger, allowed_mimetypes=['video'])
+    if not probe.file(abspath):
+        # File probe failed, skip the rest of this test
+        return data
+    data['add_file_to_pending_tasks'] = True
+    return data
+
 
 def on_worker_process(data):
     """
