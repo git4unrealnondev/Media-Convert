@@ -52,7 +52,13 @@ def on_worker_process(data):
     #    data['file_out'] = "{}-{}-{}{}".format(tmp_file_out[0], custom_string, tmp_file_out[1])
 
     #if not settings.get_setting('Execute Command'):
-    data['exec_command'] = "av1an -i " + str(data["file_in"]) + " -o " + str(data["file_out"])
+
+    #data['exec_command'] = ['ffmpeg']
+    #    data['exec_command'] += ffmpeg_args
+
+    data['exec_command'] =  ["av1an"]
+    data['exec_command'] += [" -i ", str(data["file_in"])]
+    data['exec_command'] += [" -o ", str(data["file_out"])]
     data['repeat'] = False
 
 
